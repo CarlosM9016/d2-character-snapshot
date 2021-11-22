@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const LISTEN_PORT = process.env.PORT || 8080;
 const playground = require("./playground");
+const cors = require('cors');
 
 app.use("/characters", express.static(__dirname + "/characters"));
 app.use("/css", express.static(__dirname + "/css"));
