@@ -2,7 +2,7 @@
   "name": "destinyplayground",
   "version": "1.0.0",
   "description": "bungie api interactor for character data",
-  "main": "playground.js",
+  "main": "webserver.js",
   "dependencies": {
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
