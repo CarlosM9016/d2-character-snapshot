@@ -1,0 +1,7 @@
+*.content
+*.log
+*.env
+/node_modules
+/manifest
+/characters
+downloaded_manifest_version.json

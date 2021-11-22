@@ -1,0 +1,19 @@
+{
+  "name": "destinyplayground",
+  "version": "1.0.0",
+  "description": "bungie api interactor for character data",
+  "main": "playground.js",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "extract-zip": "^2.0.1",
+    "request": "^2.88.2",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Carlos M",
+  "license": "ISC"
+}

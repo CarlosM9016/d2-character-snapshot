@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destiny 2 Character Viewer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--<video autoplay muted loop preload="true" id="myVideo">
+        <source src="images/beyond_light_loop.mp4" type="video/mp4">
+    </video>-->
+    <label for="bungie_name" id="bungie_name_label">Enter Bungie Name: </label>
+    <input type="text" id="bungie_name" name="bungie_name">
+    <input type="submit" id="submit_bungie_name" value="Submit">
+    <label id="error_message">Something went wrong... Try again.</label><br><br>
+    <label id="searching">Searching...</label>
+    <label for="users" id="users_label">Select a User: </label>
+    <select name="users" id="users"></select>
+    <input type="submit" id="select_user" value="Submit"><br><br>
+    <label id="searching_characters">Retrieving Characters...</label>
+    <label for="characters" id="characters_label">Select a Character: </label>
+    <select name="characters" id="characters"></select>
+    <input type="submit" id="select_character" value="Submit"><br><br>
+    <label id="creating_snapshot">Creating Snapshot...</label><br><br>
+    <input type="submit" id="reset_button" value="Reset Page"><br><br>
+    <p id="character_link"></p>
+    <div id="display_snapshot"></div>
+    <script src="js/index.js"></script>
+</body>
+</html>
