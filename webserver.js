@@ -1,7 +1,7 @@
 const path = require("path");
 const express = require("express");
 const app = express();
-const LISTEN_PORT = 8080;
+const LISTEN_PORT = 80;
 const playground = require("./playground");
 
 app.use("/characters", express.static(__dirname + "/characters"));
