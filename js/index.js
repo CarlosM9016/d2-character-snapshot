@@ -15,7 +15,7 @@ let character_link = document.getElementById("character_link");
 let reset_button = document.getElementById("reset_button");
 let error_message = document.getElementById("error_message");
 
-const base_url = "http://localhost:80";
+const base_url = `http://localhost:${process.env.PORT || 8080}`;
 
 search_text.style.visibility = "hidden";
 searching_characters_text.style.visibility = "hidden";
