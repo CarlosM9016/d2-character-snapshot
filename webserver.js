@@ -9,17 +9,14 @@ app.use("/css", express.static(__dirname + "/css"));
 app.use("/js", express.static(__dirname + "/js"));
 app.use("/images", express.static(__dirname + "/images"));
 
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    next();
-})
+app.use(cors());
 
 app.get("/", (request, res) => {
     res.sendFile(path.join(__dirname, "index.html"));
 });
 
 app.get("/character/:id", (req, res) =>{
-    res.setHeader("SameSite", "None");
+    res.setHeader("SameSite", "Lax");
     res.sendFile(path.join(__dirname, `/characters/${req.params.id}.html`));
 });
 
