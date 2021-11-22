@@ -13,7 +13,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "bin/mocha spec"
+    "test": "echo 'no tests'"
   },
   "author": "Carlos M",
   "license": "ISC"
