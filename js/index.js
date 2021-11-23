@@ -13,7 +13,7 @@ let creating_snapshot = document.getElementById("creating_snapshot");
 let reset_button = document.getElementById("reset_button");
 let error_message = document.getElementById("error_message");
 
-const base_url = `http://localhost:8080`;
+const base_url = ``;
 
 search_text.style.visibility = "hidden";
 searching_characters_text.style.visibility = "hidden";
