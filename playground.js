@@ -102,7 +102,7 @@ function process_item_perks(perks) {
                 continue;
         }
 
-        perks_found.push("<b>" + perk_info.displayProperties.name + "</b>" + ": " + perk_info.displayProperties.description);
+        perks_found.push("<b>" + perk_info.displayProperties.name + "</b>" + "<span class='description'>: " + perk_info.displayProperties.description + "</span>");
     }
 
     return perks_found;

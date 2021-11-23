@@ -6,6 +6,9 @@ body {
 	font-size: 16px;
 	background: gray;
 }
+.top-buttons {
+	text-align: center;
+}
 .grid-columns {
 	display: grid;
 	grid-template-columns: 46% 8% 46%;
