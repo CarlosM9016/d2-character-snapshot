@@ -1,5 +1,13 @@
 body {
 	font-family: Verdana,sans-serif;
-	font-size: 16px;
+	font-size: 1rem;
 	background: gray;
+	text-align: center;
+}
+
+.searchContainer {
+	display:inline-block;
+	padding: 0.5rem;
+	border: 0.1rem solid black;
+	text-align: center;
 }

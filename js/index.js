@@ -10,12 +10,10 @@ let characters_label = document.getElementById("characters_label");
 let character_list = document.getElementById("characters");
 let character_submit = document.getElementById("select_character");
 let creating_snapshot = document.getElementById("creating_snapshot");
-let snapshot = document.getElementById("display_snapshot");
-let character_link = document.getElementById("character_link");
 let reset_button = document.getElementById("reset_button");
 let error_message = document.getElementById("error_message");
 
-const base_url = `https://d2-character-snapshot.azurewebsites.net`;
+const base_url = `http://localhost:8080`;
 
 search_text.style.visibility = "hidden";
 searching_characters_text.style.visibility = "hidden";
@@ -26,8 +24,6 @@ character_list.style.visibility = "hidden";
 character_submit.style.visibility = "hidden";
 characters_label.style.visibility = "hidden";
 creating_snapshot.style.visibility = "hidden";
-snapshot.style.visibility = "hidden";
-character_link.style.visibility = "hidden";
 error_message.style.visibility = "hidden";
 
 bungie_name_submit.addEventListener("click", search_for_player);
@@ -38,8 +34,6 @@ reset_button.addEventListener("click", reset_page);
 var timestamp;
 
 function reset_page() {
-    snapshot.style.visibility = "hidden";
-    character_link.style.visibility = "hidden";
     search_text.style.visibility = "hidden";
     searching_characters_text.style.visibility = "hidden";
     users_label.style.visibility = "hidden";
@@ -49,8 +43,6 @@ function reset_page() {
     character_submit.style.visibility = "hidden";
     characters_label.style.visibility = "hidden";
     creating_snapshot.style.visibility = "hidden";
-    snapshot.style.visibility = "hidden";
-    character_link.style.visibility = "hidden";
 
     timestamp = null;
 
@@ -62,7 +54,6 @@ function reset_page() {
         character_list.removeChild(character_list.lastElementChild);
     }
 
-    character_link.innerHTML = "";
     bungie_name_input.value = "";
 
     bungie_name_label.style.visibility = "visible";

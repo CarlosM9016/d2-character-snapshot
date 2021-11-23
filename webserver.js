@@ -29,11 +29,11 @@ app.get("/snapshot/:membershipType/:membershipId/:characterId/:timestamp", (req,
 
 app.get("/characters/:membershipType/:membershipId", (req, res) => {
     playground.retrieve_characters(req.params.membershipType, req.params.membershipId, (results, errorCode) => {
-        //if(errorCode != undefined) {
-        //    res.status(errorCode);
-        //    res.send("error");
-        //    return;
-        //}
+        if(errorCode != undefined) {
+            res.status(errorCode);
+            res.send("error");
+            return;
+        }
         res.send(results);
     });
 });
