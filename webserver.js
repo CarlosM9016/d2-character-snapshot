@@ -1,7 +1,7 @@
 const path = require("path");
 const express = require("express");
 const app = express();
-const LISTEN_PORT = process.env.PORT || 8080;
+const LISTEN_PORT = process.env.PORT || 80;
 const playground = require("./playground");
 const cors = require('cors');
 
@@ -40,7 +40,7 @@ app.get("/characters/:membershipType/:membershipId", (req, res) => {
 
 app.get("/search/:bungiename/:bungiehash", (req, res) => {
     playground.search_players(`${req.params.bungiename}#${req.params.bungiehash}`, (results) => {
-        res.send(results);
+	    res.send(results);
     });
 });
 

@@ -51,9 +51,17 @@ function reset_page() {
     }
 
     while(character_list.hasChildNodes()) {
+	if(typeof character_list.lastElementChild != "Node") {
+		break;
+	}
         character_list.removeChild(character_list.lastElementChild);
     }
-
+    
+    let option = document.createElement("option");
+    option.text = "Default C";
+    option.style.visibility = "hidden";
+    character_list.appendChild(option);
+    
     bungie_name_input.value = "";
 
     bungie_name_label.style.visibility = "visible";
@@ -95,6 +103,9 @@ function display_characters(response) {
         option.info = found_characters[i].id;
         option.text = found_characters[i].name;
         character_list.appendChild(option);
+	if(i == 0) {
+	    character_list.value = option.value;
+	}
     }
 
     searching_characters_text.style.visibility = "hidden";
@@ -135,7 +146,7 @@ function display_players(response) {
             found_players[i].membershipType,
             found_players[i].membershipId
         ]
-        option.text = found_players[i].displayName;
+	option.text = found_players[i].displayName;
         users_list.appendChild(option);
     }
 
